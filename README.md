@@ -13,7 +13,8 @@ class OrdersScreen = () => {
   return (
     <>
       <If _={loading}
-      _then={<LoadingIndicator />} />
+      _then={<LoadingIndicator />}
+      _else={<SomethingElse />} />
     </>
   )
 }
