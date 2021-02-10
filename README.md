@@ -10,11 +10,11 @@ yarn add @kanzitelli/if-component
 import { If } from '@kanzitelli/if-component';
 
 class OrdersScreen = () => {
-	return (
-		<>
-			<If _={loading}
-			_then={<LoadingIndicator />} />
-		</>
-	)
+  return (
+    <>
+      <If _={loading}
+      _then={<LoadingIndicator />} />
+    </>
+  )
 }
 ```
