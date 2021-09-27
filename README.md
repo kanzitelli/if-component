@@ -25,7 +25,7 @@ class OrdersScreen = () => {
 ### TS lib starter
 
 ```bash
-> git clone https://github.com/kanziteli/if-component rn-lib
+> git clone https://github.com/kanzitelli/if-component rn-lib
 > cd rn-lib && rm -rf .git
 > yarn
 ```
