@@ -1,12 +1,18 @@
 {
   "name": "@kanzitelli/if-component",
-  "version": "0.0.1",
-  "description": "🤏 the tiniest missing component for React (Native). just fun experiment",
+  "version": "0.0.2",
+  "description": "The tiniest missing component for React (Native). Can be used as a TS starter for building components or libraries.",
   "author": "Batyr (dev@batyr.io)",
   "main": "lib/index.js",
   "scripts": {
     "build": "cd src && tsc && cp ../package.json ../lib/ && echo Build completed!",
-    "clean": "rm -rf ./node_modules ./package-lock.json && yarn"
+    "clean": "rm -rf ./node_modules ./package-lock.json && yarn",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format:check": "prettier --check ./src",
+    "format:write": "prettier --write ./src",
+    "release:github": "yarn build && dotenv release-it",
+    "release:npm": "yarn build && npm publish --access public",
+    "release:npm:private": "yarn build && npm publish"
   },
   "keywords": [
     "react",
@@ -17,10 +23,14 @@
     "react": ">= 16.x.x"
   },
   "devDependencies": {
-    "@types/node": "^14.14.25",
-    "@types/react": "^17.0.1",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.1.4"
+    "@react-native-community/eslint-config": "^3.0.1",
+    "@types/node": "^16.10.1",
+    "@types/react": "^17.0.24",
+    "dotenv-cli": "^4.0.0",
+    "eslint": "^7.32.0",
+    "prettier": "^2.4.1",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
   },
   "license": "MIT"
 }
