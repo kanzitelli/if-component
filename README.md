@@ -2,7 +2,7 @@
 
 ### Install it
 
-```🤏
+```
 yarn add @kanzitelli/if-component
 ```
 
