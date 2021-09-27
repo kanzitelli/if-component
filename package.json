@@ -6,7 +6,13 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "cd src && tsc && cp ../package.json ../lib/ && echo Build completed!",
-    "clean": "rm -rf ./node_modules ./package-lock.json && yarn"
+    "clean": "rm -rf ./node_modules ./package-lock.json && yarn",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format:check": "prettier --check ./src",
+    "format:write": "prettier --write ./src",
+    "release:github": "dotenv release-it",
+    "release:npm": "npm publish --access public",
+    "release:npm:private": "npm publish"
   },
   "keywords": [
     "react",
