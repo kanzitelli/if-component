@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 export type IfProps = {
   _: boolean;
   _then: JSX.Element | React.FC<any>;
