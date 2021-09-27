@@ -10,9 +10,9 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "format:check": "prettier --check ./src",
     "format:write": "prettier --write ./src",
-    "release:github": "dotenv release-it",
-    "release:npm": "npm publish --access public",
-    "release:npm:private": "npm publish"
+    "release:github": "yarn build && dotenv release-it",
+    "release:npm": "yarn build && npm publish --access public",
+    "release:npm:private": "yarn build && npm publish"
   },
   "keywords": [
     "react",
