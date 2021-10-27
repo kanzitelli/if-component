@@ -4,8 +4,14 @@
   "description": "The tiniest missing component for React (Native). Can be used as a TS starter for building components or libraries.",
   "author": "Batyr (dev@batyr.io)",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "build": "cd src && tsc && cp ../package.json ../lib/ && echo Build completed!",
+    "prebuild": "rm -rf lib",
+    "build": "tsc && echo Build completed!",
+    "postbuild": "prettier --write ./lib",
     "clean": "rm -rf ./node_modules ./package-lock.json && yarn",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "format:check": "prettier --check ./src",
@@ -13,7 +19,8 @@
     "release:github": "npm run build && dotenv release-it",
     "release:npm:public": "npm run build && npm publish --access public",
     "release:npm:private": "npm run build && npm publish",
-    "publish:npm": "npm run build && npm publish"
+    "publish:npm": "npm run build && npm publish",
+    "publish:npm:next": "npm run build && npm publish --tag next"
   },
   "keywords": [
     "react",
