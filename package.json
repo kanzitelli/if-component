@@ -34,11 +34,11 @@
   "devDependencies": {
     "@react-native-community/eslint-config": "^3.0.1",
     "@tsconfig/react-native": "^1.0.4",
-    "@types/react": "^17.0.24",
+    "@types/react": "^17.0.33",
     "dotenv-cli": "^4.0.0",
-    "eslint": "^7.32.0",
+    "eslint": "^8.1.0",
     "prettier": "^2.4.1",
-    "typescript": "^4.4.3"
+    "typescript": "^4.4.4"
   },
   "license": "MIT"
 }
