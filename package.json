@@ -1,6 +1,6 @@
 {
   "name": "@kanzitelli/if-component",
-  "version": "0.2.1-rc5",
+  "version": "0.2.1",
   "description": "The tiniest missing component for React (Native). Can be used as a TS starter for building components or libraries.",
   "author": "Batyr (dev@batyr.io)",
   "main": "lib/index.js",
