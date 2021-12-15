@@ -22,6 +22,36 @@ class OrdersScreen = () => {
 }
 ```
 
+### Expo Web
+
+Since `if-component` uses Reanimated 2, we need its babel plugin to be applied. Expo Web doesn't transpile modules by default, so we'll need to tell it to transpile the library.
+
+1. Install `@expo/webpack-config`:
+
+```
+yarn add -D @expo/webpack-config
+```
+
+2. Create `webpack.config.js` in the root of your project:
+
+```
+const createExpoWebpackConfigAsync = require('@expo/webpack-config')
+
+module.exports = async function (env, argv) {
+  const config = await createExpoWebpackConfigAsync(
+    {
+      ...env,
+      babel: { dangerouslyAddModulePathsToTranspile: ['@kanzitelli/if-component'] },
+    },
+    argv
+  )
+
+  return config
+}
+```
+
+Don't forget to add `webpack.config.js` into `tsconfig.json` under `exclude` section, if needed.
+
 ### TS lib starter
 
 ```bash
